@@ -1,0 +1,18 @@
+M:
+[w, w, w, w, w, w]
+[w, w, l, l, l, w]
+[w, l, l, h, p, l]
+[w, l, l, h, h, l]
+[w, w, p, l, l, w]
+>
+P(2, 4):
+[P, L, L]
+[H, W, L]
+[L, L, L]
+>
+P(4, 2):
+[L, P, L, L]
+[L, W, W, L]
+[L, W, W, L]
+[L, L, L, L]
+>
