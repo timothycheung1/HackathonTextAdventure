@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class navigation {
+    
+    public static char promptDirection(Scanner scnr, double position, char[][] map) {
+        String userDirection = "";
+        char direction = '\0';
+        
+        System.out.println("Please move.");
+        userDirection = scnr.next();
+        direction = userDirection.charAt(0);
+        
+        while(!(direction == 'a' || direction == 'w' || direction == 's' || direction == 'd')){
+            System.out.println("Invalid. Please use A W S D keys to move.");
+            userDirection = scnr.next();
+            direction = userDirection.charAt(0);
+            while(!isPath(direction, position, map)) {
+                System.out.println("Invalid path.");
+                userDirection = scnr.next();
+                direction = userDirection.charAt(0);
+            }
+        }
+        return direction;
+    }
+    
+    private static boolean isPath(char direction, double position, char[][] map) {
+        boolean moved = false;
+        int row = 0;
+        int column = 0;
+        if (direction == 'a')
+            position -= 0.1;
+        if (direction == 'w')
+            position -= 1.0;
+        if (direction == 's')
+            position += 1.0;
+        if (direction == 'd')
+            position += 0.1;
+        
+        row = (int)position;
+        column = (int)(position * 10 - row * 10);
+        
+        if (map[row][column] == '')//FIXME values for stuff;
+        moved = true;
+        return moved;
+    }
+    
+    
+}
