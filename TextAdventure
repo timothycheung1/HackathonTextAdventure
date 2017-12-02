@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class TextAdventure {
+
+    public static void main(String[] args) {
+        Scanner scnr = new Scanner(System.in);
+        boolean gameOver = false;
+        double currentPosition = 0.0;
+        char[][] map;
+        //FIXME: call map reader
+        
+        while(gameOver == false) {//main game loop
+            navigation.promptDirection(scnr, currentPosition, map);
+        }
+        
+
+    }
+
+}
